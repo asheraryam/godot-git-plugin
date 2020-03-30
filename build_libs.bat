@@ -5,7 +5,7 @@ cd godot-git-plugin\thirdparty\libgit2\
 mkdir build
 cd build\
 del /F CMakeCache.txt
-cmake ..
+cmake .. -DBUILD_SHARED_LIBS=OFF
 cmake --build .
 cd ../../../../
 copy godot-git-plugin\thirdparty\libgit2\build\%1\git2.lib demo\bin\win64\

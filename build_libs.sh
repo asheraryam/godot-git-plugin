@@ -5,11 +5,11 @@ cd godot-git-plugin/thirdparty/libgit2/
 mkdir build
 cd build/
 rm CMakeCache.txt
-cmake ..
+cmake .. -DBUILD_SHARED_LIBS=OFF
 cmake --build .
 cd ../../../../
-find ./ -iname "libgit2.a" -print
 mv godot-git-plugin/thirdparty/libgit2/build/libgit2.a demo/bin/x11/libgit2.a
+find ./ -iname "libgit2.a" -print
 
 cd godot-cpp/;
 apt-get install scons
