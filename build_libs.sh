@@ -8,6 +8,7 @@ rm CMakeCache.txt
 cmake ..
 cmake --build .
 cd ../../../../
+find ./ -iname "libgit2.a" -print
 mv godot-git-plugin/thirdparty/libgit2/build/$1/libgit2.a demo/bin/x11/libgit2.a
 
 cd godot-cpp/;
